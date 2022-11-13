@@ -1,0 +1,28 @@
+extends baseTemplate
+
+block content 
+  h1 PUG LOANS LIST 
+  div
+    table.table-header
+      thead
+        tr
+          th(scope='ID') #
+          th(scope='col') customerName
+          th(scope='col') phoneNumber
+          th(scope='col') address
+          th(scope='col') loanAmount
+          th(scope='col') interest
+          th(scope='col') loanTermYears
+          th(scope='col') description
+      tbody
+        each loans in l 
+          tr.table-secondary
+            td #{loans.customerName}
+            td #{loans.phoneNumber}
+            td #{loans.address}
+            td #{loans.loanAmount}
+            td #{loans.interest}
+            td #{loans.loanTermYears}
+            td #{loans.description}
+            
+          
